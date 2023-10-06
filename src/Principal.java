@@ -1,13 +1,17 @@
+import br.com.alura.screenmatch.modelos.Filme;
+// Por mais que importamos a classe se seus atributos não forem públicos eles não poderam ser acessados.
+
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
 
-        // nesse caso "Filme" seria o tipo da variável
+        // nesse caso "br.com.alura.screenmatch.modelos.Filme" seria o tipo da variável
         // Esse recurso é chamado de tipo por referência
 
-        meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 2023;
-        meuFilme.duracaoEmMinuto = 180;
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(2023);
+        meuFilme.setDuracaoEmMinuto(180);
 
 
         meuFilme.exibeFichaTecnica();
@@ -18,6 +22,11 @@ public class Principal {
 
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
+
+        String nome = "Felipe oliveira";
+
+
+
 
 
 
