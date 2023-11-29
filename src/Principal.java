@@ -54,7 +54,8 @@ public class Principal {
 
         calculadora.inclui(meuFilme);
         calculadora.inclui(outroFilme);
-        System.out.println(calculadora.getTempoTotal());
+        calculadora.inclui(lost);
+        System.out.println("soma total de tempo " + calculadora.getTempoTotal());
 
 
 
