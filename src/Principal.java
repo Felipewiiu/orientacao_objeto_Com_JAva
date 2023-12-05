@@ -3,6 +3,8 @@ import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+
+import java.util.ArrayList;
 // Por mais que importamos a classe se seus atributos não forem públicos eles não poderam ser acessados.
 
 
@@ -68,7 +70,33 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
 
         filtro.filtra(episodio);
-        //fdf
+
+        var filmeDoPaulo = new Filme(); // Nesse caso usamos a inferênca de tipos para  o filmeDoPaulo
+
+        filmeDoPaulo.setDuracaoEmMinuto(200);
+        filmeDoPaulo.setNome("Dogville");
+        filmeDoPaulo.setAnoDeLancamento(2003);
+        filmeDoPaulo.avalia(10);
+
+
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
+        listaDeFilmes.add(filmeDoPaulo);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+
+        System.out.println("Tamanho da lista de Filmes contém " + listaDeFilmes.size() + " Filmes");
+        System.out.println("Primeiro filme é " + listaDeFilmes.get(0).getNome());
+
+        System.out.println(listaDeFilmes.toString());
+
+        System.out.println("O toString do filme é " + listaDeFilmes.get(0).toString());
+
+
+
+
+
 
 
 
