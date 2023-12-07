@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.Principal;
+
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -10,13 +12,11 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("O poderoso chefão");
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
 
         // nesse caso "br.com.alura.screenmatch.modelos.Filme" seria o tipo da variável
         // Esse recurso é chamado de tipo por referência
 
-
-        meuFilme.setAnoDeLancamento(2023);
         meuFilme.setDuracaoEmMinuto(180);
         System.out.println("Duração do filme é: " + meuFilme.getDuracaoEmMinuto());
 
@@ -36,18 +36,15 @@ public class Principal {
 
         // instânciando a classe série com a herança de título
 
-        Serie lost = new Serie();
+        Serie lost = new Serie("lost", 2000);
 
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporadas(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinuto());
 
-        Filme outroFilme = new Filme("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar",2023 );
         outroFilme.setDuracaoEmMinuto(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -67,10 +64,9 @@ public class Principal {
 
         filtro.filtra(episodio);
 
-        var filmeDoPaulo = new Filme("Dogville"); // Nesse caso usamos a inferênca de tipos para  o filmeDoPaulo
+        var filmeDoPaulo = new Filme("Dogville", 2023); // Nesse caso usamos a inferênca de tipos para  o filmeDoPaulo
 
         filmeDoPaulo.setDuracaoEmMinuto(200);
-        filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
 
