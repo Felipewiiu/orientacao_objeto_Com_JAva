@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private boolean incluesoNoPlano;
@@ -63,4 +63,13 @@ public class Titulo {
     public double pegaMedia () {
         return somaAvaliacoes / totalDeAvaliacoes;
     }
+
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+        // aqui acontece uma ordenação de array em ordem alfabetica
+    }
+
+
 }
